@@ -140,6 +140,7 @@ def analize_noa(cwd, outdir, calc, noa7, Seqdict, violdict, qupldict,upldict,pad
 					outline = '{:^28} {:^14} {:>9}A  Peak {:4} from {:<}{:}  pshift {:3.2f} {:}\n'.format(conect,intdict[peak][y-2],drange,peak,linepad,plist,pshift,note)
 					udist = ' '
 					if conect in upldict.keys(): udist = upldict[conect] + 'A'
+					if conect not in upldict.keys(): udist =' '
 					if '{:}-{:}'.format(group1,group2)in ADpairs:
 						assigndict2['{:}-{:}'.format(group1,group2)].append('{:^28}  Peak {:4} from {:<}{:}\n'.format(conect,peak,linepad,plist))
 						assigndict['{:}-{:}'.format(group1,group2)].append(outline)
